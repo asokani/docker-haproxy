@@ -1,13 +1,12 @@
-FROM mainlxc/base
+FROM mainlxc/ubuntu
 MAINTAINER Asokani "https://github.com/asokani"
 
+RUN add-apt-repository ppa:vbernat/haproxy-1.5
 RUN apt-get update && \
   apt-get -y install haproxy
 
 RUN mkdir /etc/service/haproxy
 ADD haproxy.sh /etc/service/haproxy/run
-
-EXPOSE 80 443
 
 CMD ["/sbin/my_init"]
 
