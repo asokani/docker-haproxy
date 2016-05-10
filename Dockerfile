@@ -7,6 +7,7 @@ RUN apt-get update && \
 
 RUN mkdir /etc/service/haproxy
 ADD haproxy.sh /etc/service/haproxy/run
+ADD syslog-ng-haproxy.conf /etc/syslog-ng/conf.d/haproxy.conf
 
 CMD ["/sbin/my_init"]
 
