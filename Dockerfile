@@ -1,7 +1,7 @@
 FROM mainlxc/ubuntu
 MAINTAINER Asokani "https://github.com/asokani"
 
-RUN add-apt-repository ppa:vbernat/haproxy-1.5
+RUN add-apt-repository ppa:vbernat/haproxy-1.8
 RUN apt-get update && \
   apt-get -y install haproxy
 
